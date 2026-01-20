@@ -198,6 +198,26 @@
             .btn-lg { font-size: 1rem; padding: 0.75rem 2rem; }
             .service-card { min-height: auto; padding: 30px 15px; }
         }
+/* CSS untuk Peta agar Responsif dan Estetis */
+.map-container {
+    overflow: hidden;
+    border-radius: 15px; /* Menyesuaikan desain rounded Anda */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    height: 450px; /* Tinggi peta di desktop */
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        height: 300px; /* Tinggi peta lebih pendek di HP */
+    }
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
@@ -216,6 +236,7 @@
                     <li class="nav-item"><a class="nav-link" href="#services" data-en="Services">Layanan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects" data-en="Projects">Projek</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact" data-en="Contact">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#location" data-en="Location">Lokasi</a></li>
                 </ul>
                 <div class="lang-toggle d-flex align-items-center ms-3">
                     <span class="lang-toggle-label me-2" data-en="ID">ID</span>
@@ -658,15 +679,31 @@
         <p><strong data-en="Instagram:">Instagram:</strong> <a href="https://www.instagram.com/lanakaryaconstruction/" target="_blank" rel="noopener noreferrer">@lanakaryaconstruction</a></p>
         
         <div class="mt-4 shadow-sm rounded overflow-hidden" style="max-width: 800px; margin: 0 auto;">
-            <iframe 
-                src=<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.380790656564!2d106.7319969!3d-6.2134072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7c65bb1830f%3A0xcba020e17fdc8731!2sWarHam!5e0!3m2!1sid!2sid!4v1768911242376!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                width="100%" 
-                height="350" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+           
+        </div>
+    </div>
+</section>
+<section id="location" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold" data-aos="fade-up">LOKASI KAMI</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="zoom-in">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.380790656564!2d106.7319969!3d-6.2134072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7c65bb1830f%3A0xcba020e17fdc8731!2sWarHam!5e0!3m2!1sid!2sid!4v1768913137862!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                </div>
+                <div class="text-center mt-4">
+                    <p class="mb-1"><strong>Lana Karya Headquarters</strong></p>
+                    <p class="text-muted" data-en="Jakarta, Indonesia">Jakarta, Indonesia</p>
+                    <a href="https://maps.app.goo.gl/NMh1DRUAwn3ECyot7" target="_blank" class="btn btn-outline-primary btn-sm mt-2">
+                        <i class="fas fa-directions me-1"></i> Petunjuk Arah
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
